@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iris Flower Classification | AI Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <!--================ NAVBAR ================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                💙 IrisAI
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#dataset">Dataset</a></li>
+
+                <li><a href="#predict">Predict</a></li>
+
+            </ul>
+
+            <div class="menu-toggle">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--================ HERO ================-->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>IRIS Flower Classification</h1>
+
+            <p>
+
+                Predict the species of an Iris flower using Machine Learning.
+
+                Enter four flower measurements and let the AI classify the flower instantly.
+
+            </p>
+
+            <a href="#predict" class="btn">
+                Predict Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!--================ ABOUT ================-->
+
+    <section id="about" class="about">
+
+        <div class="container">
+
+            <h2>About Project</h2>
+
+            <p>
+
+                This application uses a trained Machine Learning model to classify Iris flowers into three species based on their sepal and petal measurements. The model has been trained on the famous Iris dataset using Scikit-learn.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!--================ DATASET ================-->
+
+    <section id="dataset" class="dataset">
+
+        <div class="container">
+
+            <h2>Dataset Overview</h2>
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h3 class="counter" data-target="150">0</h3>
+
+                    <p>Flower Samples</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3 class="counter" data-target="4">0</h3>
+
+                    <p>Input Features</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3 class="counter" data-target="3">0</h3>
+
+                    <p>Species</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3 class="counter" data-target="96.67">0</h3>
+
+                    <p>Model Accuracy (%)</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ PREDICTION ================-->
+
+    <section id="predict" class="predict">
+
+        <div class="container">
+
+            <h2>Predict Flower Species</h2>
+
+            <form id="predictionForm">
+
+                <div class="input-grid">
+
+                    <input
+                        type="number"
+                        step="0.1"
+                        name="sepal_length"
+                        placeholder="Sepal Length (cm)"
+                        required>
+
+                    <input
+                        type="number"
+                        step="0.1"
+                        name="sepal_width"
+                        placeholder="Sepal Width (cm)"
+                        required>
+
+                    <input
+                        type="number"
+                        step="0.1"
+                        name="petal_length"
+                        placeholder="Petal Length (cm)"
+                        required>
+
+                    <input
+                        type="number"
+                        step="0.1"
+                        name="petal_width"
+                        placeholder="Petal Width (cm)"
+                        required>
+
+                </div>
+
+                <button type="submit" class="btn">
+
+                    Predict Species
+
+                </button>
+
+            </form>
+
+            <div id="result" class="result-card">
+
+                <h3>Prediction Result</h3>
+
+                <h1 id="flowerName">---</h1>
+
+                <p id="confidence">Confidence: --%</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ MODEL INFO ================-->
+
+    <section class="model">
+
+        <div class="container">
+
+            <h2>Model Information</h2>
+
+            <div class="model-grid">
+
+                <div class="model-card">
+
+                    <h3>Algorithm</h3>
+
+                    <p>Random Forest Classifier</p>
+
+                </div>
+
+                <div class="model-card">
+
+                    <h3>Library</h3>
+
+                    <p>Scikit-learn</p>
+
+                </div>
+
+                <div class="model-card">
+
+                    <h3>Language</h3>
+
+                    <p>Python</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ FOOTER ================-->
+
+    <footer>
+
+        <p>
+
+            © 💙 Krishna Rajoo | Iris Flower Classification | CodVedX
+
+        </p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
